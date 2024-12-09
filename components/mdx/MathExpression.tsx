@@ -22,7 +22,7 @@ const MathExpression: FC<MathExpressionProps> = ({
 		});
 
 		return (
-			<div
+			<span
 				dangerouslySetInnerHTML={{ __html: html }}
 				className={`math-expression ${inline ? "inline-math" : "block-math"}`}
 			/>

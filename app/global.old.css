@@ -1,30 +1,31 @@
+@import 'tailwindcss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 ::selection {
-	background-color: #1f5b73; /* Muted blue-green for selection */
-	color: #dcd7ba; /* Warm beige text */
+	background-color: #47a3f3;
+	color: #fefefe;
 }
 
 :root {
-	--sh-class: #7e9cd8; /* Muted blue */
-	--sh-identifier: #c8c093; /* Warm beige */
-	--sh-sign: #717c7c; /* Neutral grey-green */
-	--sh-string: #98bb6c; /* Soft green */
-	--sh-keyword: #d27e99; /* Muted pink-red */
-	--sh-comment: #5a524c; /* Dark earthy grey */
-	--sh-jsxliterals: #957fb8; /* Muted violet */
-	--sh-property: #e46876; /* Coral pink */
-	--sh-entity: #ffa066; /* Peach-orange */
+	--sh-class: #2d5e9d;
+	--sh-identifier: #354150;
+	--sh-sign: #8996a3;
+	--sh-string: #007f7a;
+	--sh-keyword: #e02518;
+	--sh-comment: #a19595;
+	--sh-jsxliterals: #6266d1;
+	--sh-property: #e25a1c;
+	--sh-entity: #e25a1c;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--sh-class: #7fb4ca; /* Brighter muted blue for dark mode */
-		--sh-identifier: #dcd7ba; /* Warm beige */
-		--sh-keyword: #d27e99; /* Muted pink-red */
-		--sh-string: #a3c47f; /* Brighter green */
+		--sh-class: #4c97f8;
+		--sh-identifier: white;
+		--sh-keyword: #f47067;
+		--sh-string: #0fa295;
 	}
 	html {
 		color-scheme: dark;
@@ -54,7 +55,7 @@ html {
 }
 
 .prose .anchor:after {
-	@apply text-kanagawa-text dark:text-kanagawa-dark-text;
+	@apply text-neutral-300 dark:text-neutral-700;
 	content: '#';
 }
 
@@ -62,21 +63,17 @@ html {
 	@apply visible;
 }
 
-.prose > pre {
-	@apply rounded-lg shadow-lg;
+.prose pre {
+	@apply rounded-lg overflow-x-auto py-2 px-3 text-sm;
 }
 
 .prose code {
-	@apply px-1 py-0.5 rounded-lg px-0;
+	@apply px-1 py-0.5 rounded-lg;
 }
-
-.prose code pre {
-	@apply rounded-lg overflow-x-auto text-sm py-2 px-3;
-}
-
 
 .prose pre code {
-	line-height: 1.3;
+	border: initial;
+	line-height: 1.5;
 }
 
 .prose code span {
@@ -89,27 +86,27 @@ html {
 }
 
 .prose p {
-	@apply my-4 text-kanagawa-text dark:text-kanagawa-dark-text;
+	@apply my-4 text-neutral-800 dark:text-neutral-200;
 }
 
 .prose h1 {
-	@apply text-4xl font-medium tracking-tight mt-6 mb-2 text-kanagawa-accent;
+	@apply text-4xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h2 {
-	@apply text-xl font-medium tracking-tight mt-6 mb-2 text-kanagawa-accent;
+	@apply text-xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h3 {
-	@apply text-xl font-medium tracking-tight mt-6 mb-2 text-kanagawa-accent;
+	@apply text-xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h4 {
-	@apply text-lg font-medium tracking-tight mt-6 mb-2 text-kanagawa-accent;
+	@apply text-lg font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose strong {
-	@apply font-bold;
+	@apply font-medium;
 }
 
 .prose ul {
